@@ -1,0 +1,54 @@
+{
+    "name": "php-junior/mm-exchange-rates",
+    "description": "'MM Exchange Rates' allow you to get the latest or historical exchange rates and convert monetary values between different currencies.",
+    "keywords": [
+        "php-junior",
+        "mm-exchange-rates"
+    ],
+    "homepage": "https://github.com/php-junior/mm-exchange-rates",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nyi Nyi Lwin",
+            "email": "nyinyilwin1992@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpJunior\\MmExchangeRates\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpJunior\\MmExchangeRates\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PhpJunior\\MmExchangeRates\\MmExchangeRatesServiceProvider"
+            ],
+            "aliases": {
+                "MmExchangeRates": "PhpJunior\\MmExchangeRates\\MmExchangeRatesFacade"
+            }
+        }
+    }
+}
