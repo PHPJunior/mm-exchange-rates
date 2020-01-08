@@ -52,5 +52,7 @@
                 "ExchangeRates": "PhpJunior\\ExchangeRates\\ExchangeRatesFacade"
             }
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
