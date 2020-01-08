@@ -1,53 +1,29 @@
-# Very short description of the package
+# MM Exchange Rates
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/php-junior/mm-exchange-rates.svg?style=flat-square)](https://packagist.org/packages/php-junior/mm-exchange-rates)
-[![Build Status](https://img.shields.io/travis/php-junior/mm-exchange-rates/master.svg?style=flat-square)](https://travis-ci.org/php-junior/mm-exchange-rates)
-[![Quality Score](https://img.shields.io/scrutinizer/g/php-junior/mm-exchange-rates.svg?style=flat-square)](https://scrutinizer-ci.com/g/php-junior/mm-exchange-rates)
 [![Total Downloads](https://img.shields.io/packagist/dt/php-junior/mm-exchange-rates.svg?style=flat-square)](https://packagist.org/packages/php-junior/mm-exchange-rates)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+MM Exchange Rates Package လေးက [https://forex.cbm.gov.mm](https://forex.cbm.gov.mm) ရဲ့ Data ကို သုံးထားတာပါ
 
-## Installation
-
-You can install the package via composer:
-
-```bash
-composer require php-junior/mm-exchange-rates
-```
-
-## Usage
+## အသုံးပြုပုံ
 
 ``` php
-// Usage description here
+$exchangeRates = new \PhpJunior\ExchangeRates\ExchangeRates();
+$exchangeRates->currencies(); // Currencies
+
+$exchangeRates->exchangeRates(['USD', 'EUR']); //နောက်ဆုံး Exchange Rates
+$exchangeRates->exchangeRates(['USD', 'EUR'], '2019-01-08'); //သက်ဆိုင်ရာရက် Exchange Rates
+
+$exchangeRates->exchangeRatesBetweenDateRange(['USD', 'AUD'], '2019-12-29', '2020-01-08');
+
+$exchangeRates->convert(100,['USD', 'EUR']); // ဘယ် Currency မှာ မြန်မာငွေ ဘယ်လောက်ရှိလဲ တွက်ရန်
+$exchangeRates->convert(100,['USD', 'EUR'], '2019-01-08');
 ```
-
-### Testing
-
-``` bash
-composer test
-```
-
-### Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-### Security
-
-If you discover any security related issues, please email nyinyilwin1992@hotmail.com instead of using the issue tracker.
 
 ## Credits
 
-- [Nyi Nyi Lwin](https://github.com/php-junior)
-- [All Contributors](../../contributors)
+- [All Contributors](https://github.com)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).

@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpJunior\MmExchangeRates;
+namespace PhpJunior\ExchangeRates;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \PhpJunior\MmExchangeRates\Skeleton\SkeletonClass
+ * @see \PhpJunior\ExchangeRates\Skeleton\SkeletonClass
  */
-class MmExchangeRatesFacade extends Facade
+class ExchangeRatesFacade extends Facade
 {
     /**
      * Get the registered name of the component.

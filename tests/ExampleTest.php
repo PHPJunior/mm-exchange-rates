@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpJunior\MmExchangeRates\Tests;
+namespace PhpJunior\ExchangeRates\Tests;
 
 use PHPUnit\Framework\TestCase;
 
